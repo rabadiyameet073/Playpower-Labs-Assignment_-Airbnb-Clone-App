@@ -1,0 +1,23 @@
+/* App-level overrides — keep minimal, all design tokens are in index.css */
+
+/* Scrollbar utility for photo tour thumbnail strip */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: oklch(0.7155 0 0) transparent;
+}
+.scrollbar-thin::-webkit-scrollbar {
+  height: 4px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: oklch(0.7155 0 0);
+  border-radius: 4px;
+}
+
+/* Remove date input native styles on Webkit */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: absolute;
+}
