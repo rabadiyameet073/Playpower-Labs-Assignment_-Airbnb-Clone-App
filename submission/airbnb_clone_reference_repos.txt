@@ -1,0 +1,34 @@
+Airbnb Clone Repos — Reference / Learning Only
+(None of these match airbnb-clone-umber-two.vercel.app pixel-for-pixel.
+Use only to study specific patterns like gallery/lightbox — do not submit as-is.)
+
+1. https://github.com/harsh661/airbnb-clone
+   Next.js, TypeScript, Tailwind, Prisma — fully responsive Airbnb clone
+
+2. https://github.com/SashenJayathilaka/Airbnb-Build
+   Next.js 13, Tailwind, Prisma, MongoDB, NextAuth, Framer Motion, Cloudinary
+
+3. https://github.com/sudeepmahato16/airbnb-clone
+   Next.js, TypeScript, Tailwind, MongoDB, Prisma, NextAuth, Leaflet
+
+4. https://github.com/windsuzu/airbnb-clone
+   TypeScript, Next.js, Tailwind CSS
+
+5. https://github.com/divyeshio/next-airbnb
+   Next.js, Tailwind CSS
+
+6. https://github.com/wrujel/airbnb-clone
+   Next.js 13, search/favorites/reservations, Google/GitHub/Email auth
+
+7. https://github.com/ski043/airbnb-yt
+   Next.js 14, Kinde, Supabase, Prisma, Tailwind, Shadcn/UI
+
+8. https://github.com/Divyam2600/Airbnb-clone-2.0
+   Next.js, Tailwind CSS, NextAuth, MapBox integration
+
+9. https://github.com/dejwid/airbnb-clone
+   269 stars / 190 forks — one of the more popular generic Airbnb clones
+
+10. https://github.com/GorvGoyl/Clone-Wars
+    Curated list of 100+ open-source site clones (Airbnb section included)
+    — good place to browse more options if none above fit
