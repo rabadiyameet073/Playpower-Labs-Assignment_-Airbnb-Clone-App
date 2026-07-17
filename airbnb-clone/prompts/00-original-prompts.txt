@@ -1,0 +1,100 @@
+========================================================================
+Airbnb Clone App - AI Prompts Log
+========================================================================
+
+Below is the list of AI prompts and instruction logs used to construct the
+Airbnb Clone App during this session.
+
+Prompt 1: Project Initialization
+--------------------------------
+"Initialize a new React + Vite project in a directory called 'airbnb-clone'
+using JavaScript. Set up the basic index.html with the Google Inter font
+family and a title match: 'Airbnb | Kyoto Luxury Traditional Villa - Airbnb Clone'."
+
+Prompt 2: Design System & Styling Setup
+--------------------------------------
+"Create a comprehensive design system inside src/index.css with all variables,
+spacing resets, grids, and shadows matching Airbnb's styling conventions.
+Set the brand accent color to #FF385C (hover: #E61E4D) and primary text to #222222.
+Add custom styles for:
+- A sticky top navigation bar (80px height) with shadows and profile menu.
+- A 5-image collage grid with image-zoom on hover.
+- A sticky booking card container with border-radius and date/guest input boxes.
+- Fullscreen overlay views for the Photo Tour and Lightbox modules."
+
+Prompt 3: Custom Airbnb Header Component
+----------------------------------------
+"Create a React component src/components/Header.jsx containing the Airbnb navbar.
+It should include the Airbnb brand SVG logo, a middle search widget pill with
+border-radius, and a profile dropdown menu on the right that opens/closes when
+clicked."
+
+Prompt 4: Listing Header Component
+----------------------------------
+"Create a React component src/components/ListingHeader.jsx containing the
+property title, star ratings, review link, and location. Include a Save button
+with a toggling heart icon (red fill when saved) and a Share button that copies
+the listing link to the clipboard."
+
+Prompt 5: Hero Image Collage Grid
+---------------------------------
+"Create a React component src/components/HeroGrid.jsx that renders a 5-image
+collage using CSS grid. The left-most image should span two rows. Include a
+'Show all photos' button at the bottom-right corner. Make sure the component
+is keyboard-focusable (tabIndex=0) and opens the photo gallery on click/enter."
+
+Prompt 6: Sticky Booking Card & Date/Guest Pickers
+--------------------------------------------------
+"Create a React component src/components/BookingCard.jsx representing the sticky
+booking card on the right. Include input boxes for Check-in / Checkout dates and
+Guests count. Add dropdown overlays:
+- A datepicker panel to adjust dates.
+- A guest selector panel with counters (Adults, Children, Infants, Pets) and
+  plus/minus increment buttons.
+- Perform date-based price calculations: base cost ($320/night), cleaning fee ($60),
+  and service fee (12%). Compute the total price dynamically based on nights."
+
+Prompt 7: Fullscreen Photo Tour Gallery
+--------------------------------------
+"Create a React component src/components/PhotoTour.jsx that opens a fullscreen
+scrolling gallery when triggered. Organize all 15 property photos vertically
+with caption headers. Add a top floating bar containing a back arrow button and
+close functionality (supporting Escape key exit)."
+
+Prompt 8: Photo Lightbox with Keyboard Navigation
+-------------------------------------------------
+"Create a React component src/components/Lightbox.jsx. When an image in the Photo
+Tour is clicked, open this single-photo lightbox overlay.
+Include:
+- Floating Left and Right arrow buttons to cycle images.
+- A top bar showing the current image index (e.g., 3 / 15).
+- Loop logic (wrap to first image from last, and vice-versa).
+- Smooth fade-in/fade-out image transitions.
+- Keyboard support (ArrowLeft/ArrowRight to switch images, Escape to close)."
+
+Prompt 9: Accessibility (a11y) & Focus Traps
+---------------------------------------------
+"Add focus states, outline rules for focus-visible buttons, and keyboard controls
+across all modal overlay windows (Amenities, Photo Tour, Lightbox) so that focus
+management behaves properly and ESC always exits overlays."
+
+Prompt 10: Assembly & App Architecture
+--------------------------------------
+"Assemble all components inside src/App.jsx. Add sections for: host details,
+highlights listing, property description with a 'Show more' expand toggle,
+sleeping arrangement cards, amenities list (with a button to show the full list),
+ratings progress bars, a list of reviews, and a static map placeholder showing
+Higashiyama Ward, Kyoto. Handle conditional rendering for overlay views."
+
+Prompt 11: Comprehensive Styling, Motion, and Breakpoint Polish
+---------------------------------------------------------------
+"Refactor index.css and components to enforce modern styling tokens:
+- Add full support for media queries across key breakpoints: 1280px (desktop small), 1024px (laptop), 768px (tablet/mobile details collapse), 430px (mobile standard), and 375px (small mobile).
+- Improve focus indicator visibility with high contrast focus outline (--focus-ring: #005A9C) and outline-offset rules.
+- Support prefers-reduced-motion: reduce to strip or slow animations for accessibility.
+- Implement a custom Toast notification for copy confirmation and reservation confirmation.
+- Refactor the hero collage zoom effect and booking card dropdown transition animations."
+
+Prompt 12: Focus Trapping & Event Isolation Fix
+------------------------------------------------
+"Refactor Modal windows (AmenitiesModal, PhotoTour, Lightbox) to implement complete keyboard focus trapping (tab-cycling). Focus the primary close button on open, and restore focus to the previous active element upon close. For PhotoTour and Lightbox overlays, pass active state flags to prevent Escape key bubbling from closing both overlays simultaneously."
