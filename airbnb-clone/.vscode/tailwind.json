@@ -1,0 +1,50 @@
+{
+  "version": 1.1,
+  "atDirectives": [
+    {
+      "name": "@tailwind",
+      "description": "Use the `@tailwind` directive to insert Tailwind's `base`, `components`, `utilities` and `screens` styles into your CSS.",
+      "references": [{ "name": "Tailwind CSS Documentation", "url": "https://tailwindcss.com/docs/functions-and-directives#tailwind" }]
+    },
+    {
+      "name": "@apply",
+      "description": "Use the `@apply` directive to inline any existing utility classes into your own custom CSS.",
+      "references": [{ "name": "Tailwind CSS Documentation", "url": "https://tailwindcss.com/docs/functions-and-directives#apply" }]
+    },
+    {
+      "name": "@layer",
+      "description": "Use the `@layer` directive to tell Tailwind which 'bucket' a set of custom styles belong to.",
+      "references": [{ "name": "Tailwind CSS Documentation", "url": "https://tailwindcss.com/docs/functions-and-directives#layer" }]
+    },
+    {
+      "name": "@theme",
+      "description": "Tailwind CSS v4: Use the `@theme` directive to define your design tokens and theme configuration.",
+      "references": [{ "name": "Tailwind CSS v4 Documentation", "url": "https://tailwindcss.com/docs/v4-upgrade" }]
+    },
+    {
+      "name": "@utility",
+      "description": "Tailwind CSS v4: Use the `@utility` directive to define custom utility classes.",
+      "references": [{ "name": "Tailwind CSS v4 Documentation", "url": "https://tailwindcss.com/docs/v4-upgrade" }]
+    },
+    {
+      "name": "@custom-variant",
+      "description": "Tailwind CSS v4: Use the `@custom-variant` directive to define custom variants.",
+      "references": [{ "name": "Tailwind CSS v4 Documentation", "url": "https://tailwindcss.com/docs/v4-upgrade" }]
+    },
+    {
+      "name": "@variant",
+      "description": "Tailwind CSS v4: Use the `@variant` directive to apply styles for a specific variant.",
+      "references": [{ "name": "Tailwind CSS v4 Documentation", "url": "https://tailwindcss.com/docs/v4-upgrade" }]
+    },
+    {
+      "name": "@source",
+      "description": "Tailwind CSS v4: Use the `@source` directive to explicitly specify source files.",
+      "references": [{ "name": "Tailwind CSS v4 Documentation", "url": "https://tailwindcss.com/docs/v4-upgrade" }]
+    },
+    {
+      "name": "@config",
+      "description": "Use the `@config` directive to specify which config file Tailwind should use.",
+      "references": [{ "name": "Tailwind CSS Documentation", "url": "https://tailwindcss.com/docs/functions-and-directives#config" }]
+    }
+  ]
+}
