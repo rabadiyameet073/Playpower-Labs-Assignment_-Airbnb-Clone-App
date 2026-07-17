@@ -1,0 +1,58 @@
+graph TD
+    U[Users] --> CDN[Global CDN / Edge Network<br/>static assets, edge cache, WAF]
+
+    CDN --> FE[Frontend - React SSR/ISR<br/>listing pages prerendered + revalidated,<br/>CSR for booking flow]
+    subgraph Frontend Scaling
+        FE
+        FE2[Scaling: ISR + edge caching,<br/>stateless render nodes behind autoscaler,<br/>code-split bundles]
+    end
+
+    FE --> GW[API Gateway<br/>authN/authZ, rate limiting, routing, TLS]
+
+    GW --> LS[Listings Service]
+    GW --> SS[Search Service]
+    GW --> BS[Booking Service]
+    GW --> PS[Payments Service]
+    GW --> RS[Reviews Service]
+    GW --> MS[Media Service]
+
+    subgraph Backend Scaling
+        LS
+        SS
+        BS
+        PS
+        RS
+        MS
+        BE2[Scaling: independent horizontal autoscaling per service,<br/>async messaging via event bus - Kafka,<br/>circuit breakers + idempotent booking writes]
+    end
+
+    LS --> PG[(PostgreSQL<br/>sharded by listing/region,<br/>read replicas)]
+    BS --> PG
+    RS --> PG
+    PS --> PG
+
+    LS --> RD[(Redis<br/>hot listing cache, sessions,<br/>distributed locks for booking)]
+    BS --> RD
+
+    SS --> ES[(Elasticsearch<br/>full-text + geo search,<br/>ranking; fed by CDC pipeline)]
+    PG -. change data capture .-> ES
+
+    MS --> S3[(Object Storage - S3<br/>original photos)]
+    S3 --> IMGCDN[Image CDN<br/>on-the-fly resizing, WebP/AVIF]
+    IMGCDN --> CDN
+
+    subgraph Storage Scaling
+        PG
+        RD
+        S3
+        ST2[Scaling: shard-per-region Postgres + replicas,<br/>Redis cluster with eviction tiers,<br/>S3 lifecycle tiers + CDN offload]
+    end
+
+    subgraph Search Scaling
+        ES
+        SE2[Scaling: index sharding + replicas,<br/>geo-partitioned indices,<br/>near-real-time CDC ingestion]
+    end
+
+    subgraph Deployment Scaling
+        DEP[CI/CD: blue-green + canary releases,<br/>Kubernetes with HPA per service,<br/>multi-region active-active,<br/>observability: tracing, metrics, alerts]
+    end
