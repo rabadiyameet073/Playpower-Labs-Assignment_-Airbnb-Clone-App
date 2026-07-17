@@ -1,0 +1,17 @@
+# React app dependencies and builds
+airbnb-clone/node_modules/
+airbnb-clone/dist/
+airbnb-clone/dist-ssr/
+airbnb-clone/*.local
+
+# Large scrap/reference files
+scraped-file.html
+
+# Logs and debug files
+logs
+*.log
+npm-debug.log*
+
+# System files
+.DS_Store
+Thumbs.db
