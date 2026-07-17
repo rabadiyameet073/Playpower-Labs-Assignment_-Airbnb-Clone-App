@@ -1,0 +1,118 @@
+/* Premium Intro Animation Stylesheet */
+
+.intro-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #FF385C 0%, #D70466 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999;
+  overflow: hidden;
+  color: #ffffff;
+  pointer-events: all;
+  will-change: transform, opacity;
+}
+
+.intro-logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transform: translateY(-20px);
+}
+
+.intro-svg {
+  width: 120px;
+  height: 120px;
+  filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.5));
+  margin-bottom: 24px;
+  will-change: transform, filter;
+}
+
+/* Specific properties for SVG path draw animation */
+.intro-svg path {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.intro-text {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  gap: 1px;
+}
+
+.intro-text-letter {
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+/* Custom radial pulse wave effect for the fill stage */
+.intro-pulse-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+  opacity: 0;
+  will-change: scale, opacity;
+}
+
+/* Replay Button in Interface */
+.replay-intro-container {
+  display: flex;
+  justify-content: center;
+  padding: 16px 0;
+  margin-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.replay-intro-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted-foreground);
+  padding: 8px 16px;
+  border-radius: 24px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, background-color, border-color, color;
+}
+
+.replay-intro-btn:hover {
+  background-color: var(--secondary);
+  border-color: var(--input);
+  color: var(--foreground);
+  transform: translateY(-1.5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.replay-intro-btn:active {
+  transform: translateY(0);
+}
+
+.replay-intro-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.replay-intro-btn:hover svg {
+  transform: rotate(-18deg);
+}

@@ -1,5 +1,7 @@
 # Airbnb Clone - Kyoto Luxury Traditional Villa
 
+> **I built all of this using Antigravity by Google** — powered by the **free Gemini Pro plan** claimed using the **Jio card offer** or **student plan**.
+
 A pixel-perfect, high-fidelity responsive clone of the Airbnb listing page. Built as a single-page application (SPA) using React and Vite, showcasing curated styling variables, interactive widgets, responsive layouts (supporting resolutions from 1920px down to 320px), custom fullscreen overlays, and deep keyboard accessibility.
 
 ---

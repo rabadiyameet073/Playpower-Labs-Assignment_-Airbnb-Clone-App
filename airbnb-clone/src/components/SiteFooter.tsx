@@ -1,4 +1,5 @@
 import React, { memo, useCallback } from "react";
+import { Sparkles } from "lucide-react";
 import { useApp } from "../context/AppContext";
 
 const FOOTER_URLS: Record<string, string> = {
@@ -143,6 +144,18 @@ const SiteFooter = memo(function SiteFooter() {
                 onClick={() => showToast("Currency: ₹ INR — Change currency feature coming soon")}
               >
                 <span>₹ INR</span>
+              </button>
+              <button
+                type="button"
+                className="site-footer-btn"
+                onClick={() => {
+                  window.dispatchEvent(new CustomEvent("replay-airbnb-intro"));
+                  showToast("Replaying intro animation...");
+                }}
+                style={{ color: "var(--primary)", fontWeight: 600 }}
+              >
+                <Sparkles size={14} style={{ marginRight: "4.5px" }} />
+                <span>Replay Intro</span>
               </button>
             </div>
 

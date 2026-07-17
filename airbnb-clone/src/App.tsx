@@ -1,5 +1,5 @@
-import React, { lazy, Suspense } from "react";
-import { MotionConfig } from "framer-motion";
+import React, { lazy, Suspense, useState, useEffect } from "react";
+import { MotionConfig, motion, AnimatePresence } from "framer-motion";
 
 import { AppProvider } from "./context/AppContext";
 import Navbar from "./components/Navbar";
@@ -22,79 +22,112 @@ import Toast from "./components/Toast";
 import HelpCenter from "./components/HelpCenter";
 import AuthModal from "./components/AuthModal";
 import SavedListings from "./components/SavedListings";
+import IntroAnimation from "./components/IntroAnimation";
 
 // Lazy load the photo tour modal — only needed on interaction
 const PhotoTour = lazy(() => import("./components/PhotoTour"));
 
 export default function App() {
+  const [introComplete, setIntroComplete] = useState(() => {
+    return sessionStorage.getItem("airbnb_intro_played") === "true";
+  });
+
+  useEffect(() => {
+    const handleReplay = () => {
+      sessionStorage.removeItem("airbnb_intro_played");
+      setIntroComplete(false);
+    };
+    window.addEventListener("replay-airbnb-intro", handleReplay);
+    return () => window.removeEventListener("replay-airbnb-intro", handleReplay);
+  }, []);
+
+  const handleIntroComplete = () => {
+    sessionStorage.setItem("airbnb_intro_played", "true");
+    setIntroComplete(true);
+  };
+
   return (
     <AppProvider>
       <MotionConfig reducedMotion="user">
-        {/* Navbar */}
-        <Navbar />
-        <StickySubNavbar />
+        <AnimatePresence mode="wait">
+          {!introComplete && (
+            <IntroAnimation key="intro" onComplete={handleIntroComplete} />
+          )}
+        </AnimatePresence>
 
-        {/* Main page content */}
-        <main
-          className="mx-auto max-w-[1120px] px-6 pb-12"
-          id="main-content"
+        <motion.div
+          key="main-app-content"
+          initial={!introComplete ? { opacity: 0, y: 15 } : { opacity: 1, y: 0 }}
+          animate={introComplete ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
+          transition={{ duration: 0.65, ease: [0.25, 1, 0.5, 1], delay: 0.1 }}
+          style={{ display: introComplete ? "block" : "none" }}
         >
-          {/* Title row: h1 + rating + share/save */}
-          <TitleRow />
+          {/* Navbar */}
+          <Navbar />
+          <StickySubNavbar />
 
-          {/* Hero photo grid */}
-          <PhotoGrid />
+          {/* Main page content */}
+          <main
+            className="mx-auto max-w-[1120px] px-6 pb-12"
+            id="main-content"
+          >
+            {/* Title row: h1 + rating + share/save */}
+            <TitleRow />
 
-          {/* Two-column layout: content left, sticky card right */}
-          <div className="_UPwKNi mt-8">
-            {/* Left column */}
-            <div className="_HlYqcO" id="contentLeft">
-              <HostSummary />
-              <DescriptionSection />
-              <SleepingSection />
-              <AmenitiesSection />
-              <InlineCalendar />
-            </div>
+            {/* Hero photo grid */}
+            <PhotoGrid />
 
-            {/* Right column — sticky booking card */}
-            <div className="_nuIcYI">
-              <div className="_MpaXTl">
-                <BookingCard />
+            {/* Two-column layout: content left, sticky card right */}
+            <div className="_UPwKNi mt-8">
+              {/* Left column */}
+              <div className="_HlYqcO" id="contentLeft">
+                <HostSummary />
+                <DescriptionSection />
+                <SleepingSection />
+                <AmenitiesSection />
+                <InlineCalendar />
+              </div>
+
+              {/* Right column — sticky booking card */}
+              <div className="_nuIcYI">
+                <div className="_MpaXTl">
+                  <BookingCard />
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Wide sections below the two-column grid */}
-          <div className="_iJFHPP" id="wideSections">
-            <ReviewsSection />
-            <MapSection />
-            <MeetHost />
-            <ThingsToKnow />
-          </div>
+            {/* Wide sections below the two-column grid */}
+            <div className="_iJFHPP" id="wideSections">
+              <ReviewsSection />
+              <MapSection />
+              <MeetHost />
+              <ThingsToKnow />
+            </div>
 
-          {/* More stays nearby section */}
-          <MoreStaysNearby />
-        </main>
+            {/* More stays nearby section */}
+            <MoreStaysNearby />
+          </main>
 
-        {/* Footer */}
-        <SiteFooter />
+          {/* Footer */}
+          <SiteFooter />
 
-        {/* Photo Tour modal (lazy loaded, handles lightbox internally) */}
-        <Suspense fallback={null}>
-          <PhotoTour />
-        </Suspense>
+          {/* Photo Tour modal (lazy loaded, handles lightbox internally) */}
+          <Suspense fallback={null}>
+            <PhotoTour />
+          </Suspense>
 
-        {/* Help Center modal */}
-        <HelpCenter />
+          {/* Help Center modal */}
+          <HelpCenter />
 
-        {/* Auth Modal */}
-        <AuthModal />
+          {/* Auth Modal */}
+          <AuthModal />
 
-        {/* Saved Listings Modal */}
-        <SavedListings />
+          {/* Saved Listings Modal */}
+          <SavedListings />
 
-        {/* Global toast notifications */}
-        <Toast />
+          {/* Global toast notifications */}
+          <Toast />
+        </motion.div>
       </MotionConfig>
     </AppProvider>
   );

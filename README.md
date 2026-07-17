@@ -1,6 +1,6 @@
 # Airbnb Clone — Playpower Labs Assignment Submission
 
-> **Built using [Antigravity by Google DeepMind](https://deepmind.google/technologies/gemini/)** — the AI coding agent inside Google Gemini, accessed via the **Google Gemini free tier (student page)** and **Jio Plan Pro Gemini plan**. Every component, design token, architecture decision, and prompt in this project was built through AI-native workflows with no prior template code.
+> **I built all of this using Antigravity by Google** — powered by the **free Gemini Pro plan** claimed using the **Jio card offer** or **student plan**. Every component, design token, architecture decision, and prompt in this project was built through AI-native workflows with no prior template code.
 
 ---
 
@@ -341,4 +341,4 @@ No `.env` file is needed to run locally or deploy.
 
 ---
 
-*Built with ❤️ using Antigravity by Google DeepMind — Google Gemini free tier (student page) + Jio Plan Pro Gemini plan.*
+*Built with ❤️ using Antigravity by Google — free Gemini Pro plan (Jio card offer / student plan).*
