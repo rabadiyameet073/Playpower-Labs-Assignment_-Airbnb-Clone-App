@@ -1,0 +1,167 @@
+You are a Senior Frontend Engineer and UI Pixel-Perfect Specialist.
+
+Task:
+I already have an Airbnb clone project. I also have another Airbnb clone repository that contains a more accurate implementation.
+
+Reference Website:
+https://airbnb-clone-umber-two.vercel.app/
+
+Goal:
+Make MY project look and behave exactly like the reference website while REUSING as much code as possible from the existing repository instead of rewriting everything from scratch.
+
+Instructions:
+
+1. First analyze both projects completely.
+   - Compare folder structure.
+   - Compare components.
+   - Compare layouts.
+   - Compare styling.
+   - Compare responsiveness.
+   - Compare animations.
+   - Compare icons.
+   - Compare spacing.
+   - Compare typography.
+   - Compare interactions.
+
+2. Whenever the repository already contains a component that matches the reference website:
+   - Reuse that component.
+   - Copy only the required code.
+   - Preserve its logic.
+   - Do NOT rewrite it unless absolutely necessary.
+
+3. If my project already has a similar component:
+   - Merge the better implementation.
+   - Keep clean architecture.
+   - Avoid duplicate code.
+
+4. Make every section pixel-perfect.
+
+Check every detail:
+- Navbar
+- Search bar
+- Hero section
+- Category slider
+- Listing cards
+- Card hover effects
+- Image gallery
+- Price section
+- Rating stars
+- Footer
+- Buttons
+- Inputs
+- Icons
+- Modals
+- Dropdowns
+- Loading states
+- Empty states
+
+5. Match exactly:
+- Widths
+- Heights
+- Margins
+- Padding
+- Border radius
+- Shadows
+- Font sizes
+- Font weights
+- Letter spacing
+- Line height
+- Colors
+- Hover states
+- Active states
+- Focus states
+- Disabled states
+- Transition timing
+- Animation easing
+- Scroll behavior
+
+6. Responsive Requirements
+
+Desktop:
+1920px
+1728px
+1536px
+1440px
+1280px
+
+Laptop:
+1024px
+
+Tablet:
+768px
+
+Mobile:
+430px
+390px
+375px
+360px
+320px
+
+The layout should match the reference at every breakpoint.
+
+7. Code Quality
+
+- Never duplicate components.
+- Extract reusable components.
+- Keep TypeScript types strict.
+- Follow existing project architecture.
+- Remove unused code.
+- Remove dead CSS.
+- Keep imports clean.
+- Preserve SEO.
+- Preserve accessibility.
+
+8. Styling
+
+Reuse existing Tailwind classes whenever possible.
+
+Only add new classes if they are required to match the reference exactly.
+
+9. Before changing anything
+
+Identify:
+- Existing reusable components
+- Existing utilities
+- Existing hooks
+- Existing styles
+- Existing icons
+
+Reuse them first.
+
+10. After every completed section
+
+Verify:
+✅ Pixel-perfect compared with reference
+✅ Responsive
+✅ No visual regressions
+✅ No TypeScript errors
+✅ No ESLint errors
+✅ No hydration issues
+✅ No console errors
+
+11. Never replace working code unless the reference implementation is visibly better.
+
+12. Work section-by-section in this order:
+
+1. Layout
+2. Header
+3. Search Bar
+4. Hero
+5. Categories
+6. Listing Grid
+7. Listing Card
+8. Footer
+9. Responsive Fixes
+10. Micro Animations
+11. Final Polish
+
+13. At the end provide:
+
+- Files modified
+- Files copied from the repository
+- Components reused
+- Components merged
+- Components newly created
+- Remaining visual differences (if any)
+
+The objective is to make my project visually indistinguishable from the reference website while maximizing reuse of existing repository code and maintaining a clean, production-quality Next.js codebase.
