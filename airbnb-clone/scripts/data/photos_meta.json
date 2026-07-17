@@ -1,0 +1,127 @@
+[
+  {
+    "src": "./assets/listing-photo-0.png",
+    "alt": "Photo of Romantic Jacuzzi 1BHK Candolim - 0",
+    "room": "Room Photo 0"
+  },
+  {
+    "src": "./assets/listing-photo-1.png",
+    "alt": "Photo of Romantic Jacuzzi 1BHK Candolim - 1",
+    "room": "Room Photo 1"
+  },
+  {
+    "src": "./assets/listing-photo-2.jpeg",
+    "alt": "Photo of Romantic Jacuzzi 1BHK Candolim - 2",
+    "room": "Room Photo 2"
+  },
+  {
+    "src": "./assets/listing-photo-3.jpeg",
+    "alt": "Photo of Romantic Jacuzzi 1BHK Candolim - 3",
+    "room": "Room Photo 3"
+  },
+  {
+    "src": "./assets/listing-photo-4.jpeg",
+    "alt": "Living room 1",
+    "room": "Living room 1"
+  },
+  {
+    "src": "./assets/listing-photo-5.jpeg",
+    "alt": "Living room 2",
+    "room": "Living room 2"
+  },
+  {
+    "src": "./assets/listing-photo-6.jpeg",
+    "alt": "Living room 2",
+    "room": "Living room 2"
+  },
+  {
+    "src": "./assets/listing-photo-7.jpeg",
+    "alt": "Living room 2",
+    "room": "Living room 2"
+  },
+  {
+    "src": "./assets/listing-photo-8.jpeg",
+    "alt": "Living room 2",
+    "room": "Living room 2"
+  },
+  {
+    "src": "./assets/listing-photo-9.jpeg",
+    "alt": "Photo of Romantic Jacuzzi 1BHK Candolim - 9",
+    "room": "Room Photo 9"
+  },
+  {
+    "src": "./assets/listing-photo-10.jpeg",
+    "alt": "Photo of Romantic Jacuzzi 1BHK Candolim - 10",
+    "room": "Room Photo 10"
+  },
+  {
+    "src": "./assets/listing-photo-11.jpeg",
+    "alt": "Photo of Romantic Jacuzzi 1BHK Candolim - 11",
+    "room": "Room Photo 11"
+  },
+  {
+    "src": "./assets/listing-photo-12.jpeg",
+    "alt": "Photo of Romantic Jacuzzi 1BHK Candolim - 12",
+    "room": "Room Photo 12"
+  },
+  {
+    "src": "./assets/listing-photo-13.jpeg",
+    "alt": "Photo of Romantic Jacuzzi 1BHK Candolim - 13",
+    "room": "Room Photo 13"
+  },
+  {
+    "src": "./assets/listing-photo-14.jpeg",
+    "alt": "Photo of Romantic Jacuzzi 1BHK Candolim - 14",
+    "room": "Room Photo 14"
+  },
+  {
+    "src": "./assets/listing-photo-15.jpeg",
+    "alt": "Photo of Romantic Jacuzzi 1BHK Candolim - 15",
+    "room": "Room Photo 15"
+  },
+  {
+    "src": "./assets/listing-photo-16.jpeg",
+    "alt": "Photo of Romantic Jacuzzi 1BHK Candolim - 16",
+    "room": "Room Photo 16"
+  },
+  {
+    "src": "./assets/listing-photo-17.jpeg",
+    "alt": "Additional photos",
+    "room": "Additional photos"
+  },
+  {
+    "src": "./assets/listing-photo-18.jpeg",
+    "alt": "Additional photos",
+    "room": "Additional photos"
+  },
+  {
+    "src": "./assets/listing-photo-19.jpeg",
+    "alt": "Additional photos",
+    "room": "Additional photos"
+  },
+  {
+    "src": "./assets/listing-photo-20.jpeg",
+    "alt": "Additional photos",
+    "room": "Additional photos"
+  },
+  {
+    "src": "./assets/listing-photo-21.jpeg",
+    "alt": "Additional photos",
+    "room": "Additional photos"
+  },
+  {
+    "src": "./assets/listing-photo-22.jpeg",
+    "alt": "Additional photos",
+    "room": "Additional photos"
+  },
+  {
+    "src": "./assets/listing-photo-23.jpeg",
+    "alt": "Additional photos",
+    "room": "Additional photos"
+  },
+  {
+    "src": "./assets/listing-photo-24.jpeg",
+    "alt": "Additional photos",
+    "room": "Additional photos"
+  }
+]
